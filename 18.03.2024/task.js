@@ -17,10 +17,10 @@ if( num1>num2){
 let lightcolor="green"
 
 if(lightcolor="green"){
-    console.log("green")
+    console.log("GO")
 }else if(lightcolor="yellow"){
     console.log("slow down")
-}else if(lightcolor="red"){
+}else {
     console.log("stop")
 }
 
