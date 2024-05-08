@@ -1,4 +1,4 @@
-Q.-1 what is the result of "true && false"
+Q-1 what is the result of "true && false"
 ans:-false
 
 Q.-2 what is the result of "true|| false"

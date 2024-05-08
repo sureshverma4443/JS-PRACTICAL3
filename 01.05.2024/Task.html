@@ -1,0 +1,730 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+     body{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        nav{
+         display: flex;
+         justify-content: space-around;
+         background-color: rgb(236,241,239);
+         align-items: center;
+         padding: 0.5%;
+         position: sticky;
+         top: 0%;
+        }
+        span{
+         display: none;
+        }
+        .navlinks{
+            color: green;
+        }
+        .navlinks a{
+            text-decoration: none;
+            color:rgb(26,64,64);
+            font-weight: 1000;
+            margin: 2%;
+            font-size: large;
+        }
+        .navlinks select{
+            color:rgb(26,64,64);
+            font-weight: bold;
+            border: none;
+            background-color: rgb(236,241,239);
+            font-size: large;
+            width: 9%;
+            margin: 2%;
+        }
+        .searchmenu{
+           display: flex;
+        }
+        .searchmenu input{
+            height: 30px;
+            width: 200px;
+            margin: 5%;
+            border-radius: 5px;
+            border: 1px solid black;
+        }
+        .searchmenu input:hover{
+            border: 1px solid rgb(124, 207, 218);
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        .searchmenu button{
+            background-color: rgb(23, 235, 30);
+            border: none;
+            margin: 5%;
+            width: 50%;
+            height: 30px;
+            border-radius: 5px;
+            color: white;
+        }
+        .searchmenu button:hover{
+            background-color: rgb(64, 150, 66); 
+            cursor: pointer;
+            color: white;
+        }
+
+
+        .herosection{
+            /* background-image: url(./photo/AdobeStock_598732082_Preview.jpeg); */
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-attachment: fixed;
+            margin: 0px; 
+        }
+        .herosection img{
+            width: 100%;
+        }
+        .Toad{
+            position: absolute;
+            color: rgb(212, 208, 208);
+            margin-left: 60%;
+            margin-top: -25%;
+            font-size: larger;
+        }
+        .photogallery{
+            margin: auto;
+            background-color: azure;
+            height: 1000px;
+        }
+        .photogallery h1{
+            padding: 20px 50px;
+            font-family: cursive;
+        }
+        .gallery img{
+            width: 450px;
+            height: 350px;
+            /* margin: 15px; */
+            border-radius: 10px;
+
+
+        }
+        .gallery div{
+            overflow: hidden;
+            border-radius: 10px;
+            width: 70%;
+            margin: 10px;
+            padding: 0;
+            border: 1px solid;
+        }
+        .gallery div img:hover{
+            cursor: pointer;
+            transform: scale(1.2);
+            transition:all 1s ease-in-out ;
+            margin: 0;
+           padding: 0;
+        }
+            
+        
+        .gallery{
+            display: grid;
+            grid-template-columns: repeat(3,1fr);
+            /* margin: 10%; */
+            margin-left: 100px;
+            margin-right: 100px;
+        }
+
+
+        .card{
+            margin-top: 20px;
+            background-color: azure;
+            height: 900px;
+            display: grid;
+            grid-template-columns: repeat(4,1fr);
+            padding: 80px;
+        }
+        .card div{
+            overflow: hidden;
+            border: 1px solid palevioletred;
+            margin: 5%;
+            width: 300px;
+            height: 400px;
+            text-align: center;
+            /* border-radius: 10px; */
+            border-radius: 100px 0px 100px  0px;
+
+        }
+        .card div img{
+            width: 300px;
+            height: 300px;
+        }
+        .card div img:hover{
+            transform: scale(1.2);
+            transition: all 1s ease-in-out;
+            cursor: pointer;
+        }
+        .card div h1:hover{
+            transform: scale(1.2);
+            color: rgb(72, 255, 0);
+            transition: all 1s ease-in-out;
+
+        }
+
+        footer{
+            display: grid; 
+            grid-template-columns: repeat(3,1fr);
+            place-items: center;
+            margin-top: 20px;
+            margin-bottom: 20px;
+            background-color: black;
+            color: white;
+        
+        }
+        footer div h1:hover{
+            color: red;
+        }
+
+
+
+
+        @media screen and (min-width:200px) and (max-width:420px){
+            body{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        } 
+
+
+
+
+        nav{
+         display: flex;
+        height: 80px;
+         
+        }
+        span{
+         display: block;
+        font-size: 40px;
+         color: black;
+        }
+        .navlinks{
+            color: green;
+        }
+       
+        .navlinks a{
+            text-decoration: none;
+            color:rgb(26,64,64);
+            font-weight: 1000;
+            margin: 2%;
+            font-size: large;
+            display: none;
+        }
+        .navlinks select{
+            color:rgb(26, 27, 64);
+            font-weight: bold;
+            border: none;
+            background-color: rgb(236,241,239);
+            font-size: large;
+            width: 9%;
+            margin: 2%;
+            display: none;
+        }
+        .searchmenu{
+           display: flex;
+           display: none;
+        }
+        .searchmenu input{
+            height: 30px;
+            width: 200px;
+            margin: 5%;
+            border-radius: 5px;
+            border: 1px solid black;
+        }
+        .searchmenu input:hover{
+            border: 1px solid rgb(124, 207, 218);
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        .searchmenu button{
+            background-color: rgb(23, 235, 30);
+            border: none;
+            margin: 5%;
+            width: 50%;
+            height: 30px;
+            border-radius: 5px;
+            color: white;
+        }
+        .searchmenu button:hover{
+            background-color: rgb(64, 150, 66); 
+            cursor: pointer;
+            color: white;
+        }
+
+
+        .herosection{
+            /* background-image: url(./photo/AdobeStock_598732082_Preview.jpeg); */
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-attachment: fixed;
+            margin: 0px; 
+        }
+        .herosection img{
+            width: 100%;
+            height: 200px;
+        }
+        .Toad{
+            position: absolute;
+            color: rgb(212, 208, 208);
+            margin-left: 55%;
+            margin-top: -40%;
+            font-size: small;
+        }
+        .photogallery{
+            margin: auto;
+            background-color: azure;
+            height: 2200px;
+           
+        }
+        .photogallery h1{
+            padding: 20px 50px;
+            font-family: cursive;
+        }
+        .gallery img{
+            width: 300px;
+            height: 300px;
+            /* margin: 15px; */
+            border-radius: 10px;
+
+
+        }
+        .gallery div{
+            overflow: hidden;
+            border-radius: 10px;
+            width: 300px;
+            height: 300px;
+            
+            margin: auto;
+            padding: 0;
+            border: 1px solid;
+        }
+        .gallery div img:hover{
+            cursor: pointer;
+            transform: scale(1.2);
+            transition:all 1s ease-in-out ;
+            margin: 0;
+           padding: 0;
+        }
+            
+        
+        .gallery{
+            display: grid;
+            grid-template-columns: repeat(1,1fr);
+            /* margin: 10%; */
+            margin:auto;
+            gap: 20px;
+            /* display: flex;
+            flex-direction: column; */
+            /* margin-left: 100px;
+            margin-right: 100px; */
+        }
+
+
+        .card{
+            margin: auto;
+            background-color: azure;
+            height: 3500px;
+            width: 300px;
+            display: grid;
+            grid-template-columns: repeat(1,1fr);
+            padding: 0px;
+        }
+        .card div{
+            margin: auto;
+            overflow: hidden;
+            border: 1px solid black;
+            /* margin-bottom: 5%; */
+            width: 200px;
+            height: 400px;
+            text-align: center;
+            border-radius: 100px 0px 100px 0px;
+          
+
+        }
+        .card div img{
+            width: 250px;
+            height: 300px;
+        }
+        .card div img:hover{
+            transform: scale(1.2);
+            transition: all 1s ease-in-out;
+            cursor: pointer;
+        }
+        .card div h1:hover{
+            transform: scale(1.2);
+            color: rgb(72, 255, 0);
+            transition: all 1s ease-in-out;
+
+        }
+
+        footer{
+            display: grid; 
+            grid-template-rows: repeat(3,1fr);
+            place-items: center;
+            /* margin-top: 20px;
+            margin-bottom: 20px; */
+            background-color: black;
+            color: white;
+            height: 200px;
+        
+        }
+        footer div h1{
+            font-size: 20px;
+        }
+        footer div h1:hover{
+            color: red;
+        }
+
+
+    }
+    @media screen and (min-width:421px) and (max-width:834px){
+        body{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        nav{
+         display: flex;
+         justify-content: space-around;
+         background-color: rgb(236,241,239);
+         align-items: center;
+         padding: 0.5%;
+         position: sticky;
+         top: 0%;
+        }
+        span{
+         display: none;
+        }
+        .navlinks{
+            color: green;
+        }
+        .navlinks a{
+            text-decoration: none;
+            color:rgb(26,64,64);
+            font-weight: 100;
+            margin: auto;
+            font-size: smaller;
+        }
+        .navlinks select{
+            color:rgb(26,64,64);
+            font-weight: 100;
+            border: none;
+            background-color: rgb(236,241,239);
+            font-size: smaller;
+            width: 10%;
+            margin: 2%;
+        }
+        .searchmenu{
+           display: flex;
+        }
+        .searchmenu input{
+            height: 20px;
+            width: 50px;
+            margin: 5%;
+            border-radius: 5px;
+            border: 1px solid black;
+            margin-left: -30px;
+        }
+        .searchmenu input:hover{
+            border: 1px solid rgb(124, 207, 218);
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        .searchmenu button{
+            background-color: rgb(23, 235, 30);
+            border: none;
+            margin: 5%;
+            width: 60%;
+            height: 30px;
+            border-radius: 5px;
+            color: white;
+        }
+        .searchmenu button:hover{
+            background-color: rgb(64, 150, 66); 
+            cursor: pointer;
+            color: white;
+        }
+
+
+        .herosection{
+            /* background-image: url(./photo/AdobeStock_598732082_Preview.jpeg); */
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-attachment: fixed;
+            margin: 0px; 
+        }
+        .herosection img{
+            width: 100%;
+        }
+        .Toad{
+            position: absolute;
+            color: rgb(212, 208, 208);
+            margin-left: 60%;
+            margin-top: -35%;
+            font-size: smaller;
+        }
+        .photogallery{
+            margin: auto;
+            background-color: azure;
+            height: 800px;
+        }
+        .photogallery h1{
+            padding: 20px 50px;
+            font-family: cursive;
+        }
+        .gallery img{
+            width: 250px;
+            height: 150px;
+            /* margin: 15px; */
+            border-radius: 10px;
+
+
+        }
+        .gallery div{
+            overflow: hidden;
+            border-radius: 10px;
+            width: 70%;
+            margin: 10px;
+            padding: 0;
+            border: 1px solid;
+        }
+        .gallery div img:hover{
+            cursor: pointer;
+            transform: scale(1.2);
+            transition:all 1s ease-in-out ;
+            margin: 0;
+           padding: 0;
+        }
+            
+        
+        .gallery{
+            display: grid;
+            grid-template-columns: repeat(2,1fr);
+            /* margin: 10%; */
+            margin-left: 100px;
+            margin-right: 100px;
+        }
+
+
+        .card{
+            margin-top: 20px;
+            background-color: azure;
+            height: 1800px;
+            display: grid;
+            grid-template-columns: repeat(2,1fr);
+            padding: 80px;
+        }
+        .card div{
+            overflow: hidden;
+            border: 1px solid palevioletred;
+            margin: 5%;
+            width: 300px;
+            height: 400px;
+            text-align: center;
+            /* border-radius: 10px; */
+            border-radius: 100px 0px 100px  0px;
+
+        }
+        .card div img{
+            width: 300px;
+            height: 300px;
+        }
+        .card div img:hover{
+            transform: scale(1.2);
+            transition: all 1s ease-in-out;
+            cursor: pointer;
+        }
+        .card div h1:hover{
+            transform: scale(1.2);
+            color: rgb(72, 255, 0);
+            transition: all 1s ease-in-out;
+
+        }
+
+        footer{
+            display: grid; 
+            grid-template-columns: repeat(3,1fr);
+            place-items: center;
+            margin-top: 20px;
+            margin-bottom: 20px;
+            background-color: black;
+            color: white;
+        
+        }
+        footer div h1:hover{
+            color: red;
+        }
+
+        footer div{
+
+        }
+
+
+
+    }
+            
+        
+      
+
+</style>
+<body>
+    
+    <nav>
+     <div>
+        <img src="./photo/logo.webp">
+     </div >
+     <div class="navlinks"> 
+            <span>&#9776;</span>
+        <a href="https://a-z-animals.com/animals/">All Animals</a>
+        <select>
+            <option>Animals</option>
+            <option>By Stating letter</option>
+            <option>By Scientific Name</option>
+            <option>By Class</option>
+            <option>By Location</option>
+            <option>Endangered</option>
+            <option>Mammals</option>
+            <option>Reptiles</option>
+            <option>Fish</option>
+            <option>Birds</option>
+            <option>Amphibians</option>
+            <option>REference</option>
+        </select>
+        <a href="https://a-z-animals.com/blog/">Aricles</a>
+        <a href="https://a-z-animals.com/reviews/">Review</a>
+        <select>
+            <option>Pets</option>
+            <option>All Pets</option>
+            <option>Cat Breeds</option>
+            <option>Dog Breeds</option>
+            <option>Pet Birds</option>
+            <option>Pet Rodent</option>
+            <option>Exotic Pets</option>
+            <option>Pet Fish</option>
+        </select>
+        <select>
+            <option>Places</option>
+            <option>All Places</option>
+            <option>Aquariums</option>
+            <option>Islands</option>
+            <option>Lakes</option>
+            <option>Mountains</option>
+            <option>Parks</option>
+            <option>River</option>
+            <option>Waterfalls</option>     
+        </select>
+        <select>
+            <option>Quizzes</option>
+            <option>All Quizzes</option>
+            <option>Snake Quiz</option>
+            <option>Dog Quiz</option>
+            <option>Cat Quiz</option>
+            <option>flags of the World</option>
+            <option>State Flags</option>           
+        </select>
+        <select>
+            <option>About</option>
+            <option>All A-Z Animals</option>
+            <option>Snake Quiz</option>
+            <option>Contacts</option>
+            <option>Sourcing our Content</option>
+            <option>Privacy Policy</option>
+            <option>Terms & Conditions</option>           
+        </select>
+     </div>
+     <div class="searchmenu">
+        <input placeholder="Search">
+        <button>Search</button>
+     </div>
+    </nav> 
+
+    <div class="herosection">
+        <img src="./photo/AdobeStock_598732082_Preview.jpeg" alt="">
+    <div class="Toad">
+         <h1>chameleon, (family Chamaeleonidae)</h1>
+    </div>
+    </div>
+    <div class="photogallery">
+        <h1>Photogallery</h1>
+        <div class="gallery">
+            <div><img src="./photo/AdobeStock_100287424_Preview.jpeg"></div>
+            <div><img  src="./photo/AdobeStock_144181825_Preview.jpeg"></div>
+            <div><img src="./photo/AdobeStock_334005837_Preview.jpeg"></div>
+            <div><img src="./photo/AdobeStock_303624505_Preview.jpeg"></div>
+            <div><img src="./photo/AdobeStock_317294940_Preview.jpeg"></div>
+            <div><img src="./photo/AdobeStock_559184660_Preview.jpeg"></div>
+           
+            
+        </div>
+    </div>
+    <div class="card">
+        <div>
+            <img src="./photo/AdobeStock_672029916_Preview.jpeg">
+            <h1> Sparrow1</h1>
+        </div>
+        <div>
+            <img src="./photo/AdobeStock_565360370_Preview.jpeg">
+             <h1> Sparrow2</h1>
+        </div>
+        <div>
+            <img src="./photo/AdobeStock_243675911_Preview.jpeg">
+             <h1> Sparrow3</h1>
+        </div>
+        <div>
+            <img src="./photo/AdobeStock_442543151_Preview.jpeg">
+             <h1> Sparrow4</h1>
+        </div>
+        <div>
+            <img src="./photo/AdobeStock_367863869_Preview.jpeg">
+             <h1> Sparrow5</h1>
+        </div>
+        <div>
+            <img src="./photo/AdobeStock_118613_Preview.jpeg">
+             <h1> Sparrow6</h1>
+        </div>
+        <div>
+            <img src="./photo/AdobeStock_332675664_Preview.jpeg">
+             <h1> Sparrow7</h1>
+        </div>
+        <div>
+            <img src="./photo/AdobeStock_89989031_Preview.jpeg">
+             <h1> Sparrow8</h1>
+        </div>
+      
+
+    </div>
+
+    <footer>
+        <div>
+            <h1>About Us</h1>
+            <h1>contact</h1>
+            <h1>Location</h1>
+            <h1>Carrer</h1>
+        </div>
+         
+        <div>
+            <h1>Instagram </h1>
+            <h1>facebook</h1>
+            <h1>telegram</h1>
+            <h1>Twitter</h1>
+        </div>
+        <div>
+            <h1>About Us</h1>
+            <h1>contact</h1>
+            <h1>Location</h1>
+            <h1>Carrer</h1>
+        </div>
+
+
+    </footer>
+
+    
+</body>
+</html>

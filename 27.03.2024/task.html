@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .menubar{
+            display: flex;
+            justify-content: space-around;
+            margin: auto;
+           height: 120px;
+           color: white;
+           align-items: center;
+            background-image:linear-gradient( to right,rgb(123,73,253) ,rgb(89,162,228))
+        }
+        .menubar img{
+            width: 20%;
+            border-radius: 50%;
+        }
+        .menubar div{
+            font-size: 20px;
+            color: white;
+            font-weight: bold;
+        }
+        .menulink a{            
+            color: white;
+            text-decoration: none;
+            margin: 15px;
+            
+        }
+        #Schedule_a_Demo{
+            background-color: rgba(255, 217, 0, 0.815);
+            padding: 20px;
+            border-radius: 10px;
+            color: black;
+        }
+        #Schedule_a_Demo:hover{
+            background-color: white;
+            color: rgb(89,162,228);
+        }
+        .secondbar{
+            width: 100%;
+            height: 600px;
+            background-image:linear-gradient( to right,rgb(123,73,253) ,rgb(89,162,228));
+            display:grid;
+            grid-template-columns: repeat(2,1fr);
+            border: 1px solid yellow;
+
+        }
+        .secondbarleft{
+            border: 1px solid yellow;
+            color: white;
+            margin-left: 25%;
+        }
+        .secondbarleft h1{
+            font-size: 60px;
+            font-weight: bold;
+            
+        }
+        #img1{
+            position: relative;
+            margin-top: 25%;
+            margin-left: 10%;
+        }
+        #img2{
+            position: relative;
+            margin-top: 2%;
+            margin-left: 4%;
+        }
+        #img3{
+            position: relative;
+            margin-top: -35%;
+            margin-left: 25%;
+            
+        }
+        .secondbarright:hover{
+            transform: translate(40px,-40px);          
+            transition: all 1s ease-in-out;
+
+        }
+        .thirdbar{
+            border: 1px solid pink;
+            text-align: center;
+            color: white;
+            background-image:linear-gradient( to right,rgb(112, 88, 250) ,rgba(89, 163, 228, 0.651));
+        }
+        .thirdbar>div>h4{
+            margin: 20px;
+        }
+        .thirdbar img{
+            width: 100px;
+            height: 50px;
+            color: pink;
+            border-radius: 10px;
+            margin: 30px;
+            
+        }
+        .thirdbarlogo{
+            display: flex;
+            justify-content: space-evenly;
+        }
+        
+        .fourbar{
+            width: 100%;
+            height: 700px;
+            /* background-image:linear-gradient( to right,rgb(123,73,253) ,rgb(89,162,228)); */
+            color: black;
+            display:grid;
+            grid-template-columns: repeat(2,1fr);
+            border: 1px solid yellow;
+        }
+        .fourbarleft{
+            border: 1px solid yellow;
+            color: black;
+            margin-left: 25%;
+        }
+        .fourbarleft h1{
+            font-size: 50px;
+            font-weight: bold;
+        }
+        .fourbarright:hover{
+            transform: translate(40px,-40px);          
+            transition: all 1s ease-in-out;
+        }
+        .fifthbar{
+            width: 100%;
+            height: 1000px;
+            border: 1px solid black;
+            text-align: center;
+            font-weight: bold;
+            background-image: linear-gradient(to right,rgb(212,242,214), rgb(185,224,245));
+        }
+        .fifthbar h1{
+            margin-top: 150px;
+            font-weight: bold;
+        }
+        
+        .fifthbarcard{
+            display: grid;
+            grid-template-columns: repeat(5,1fr);
+            border: 1px solid black;
+            margin-top: 100px;
+            margin-left: 250px;
+            width: 70%;
+            place-items: center;
+           
+            
+        }
+        .fifthbarcard div{
+            border: 1px solid yellowgreen;
+            width: 70%;
+            height: 250px;
+            padding: 20px;
+            background-color: white;
+            border-radius: 10px;
+            margin: 25px;
+            
+        }
+        
+        .six h1,h3{
+            margin-top: 30px;
+            text-align: center;
+        }
+        .sixbar{
+            width: 100%;
+            height: 500px;  
+            display:grid;
+            grid-template-columns: repeat(2,1fr);
+            border: 1px solid yellow;
+
+        }
+        .sixbarleft{
+            border: 1px solid yellow;
+            color: white;
+            margin-left: 25%;
+        }
+        .sixbarright{
+            border: 1px solid yellow;
+            margin-left: 10%;
+            margin-top: 8%;
+        }
+        .sevenbar{
+             background-color: rgb(237,235,254);
+             border: 1px solid greenyellow;
+
+        }
+        .sevenbar h1{
+            text-align: center;
+             margin: 3%;
+        }
+        .sevenbar div{
+            border: 1px solid black;
+            width: 40%;
+           margin: auto;
+           border-radius: 10px;
+           background-color: white;
+           font-weight: 100px;
+           padding: 3%;
+        }
+        .sevenbar>div>h2{
+            font-size: xx-large;
+        }
+
+    </style>
+    </head>
+<body>
+    <div class="menubar">
+        <div>
+             <img src="./photo/docq.png">DocQ
+        </div>
+        <div class="menulink">
+            <a href="">Solution</a>
+            <a href="">learn</a>
+            <a href="">Blog</a>
+            <a id="Schedule_a_Demo" href="">Schedule a Demo</a>
+        </div>
+    </div>
+    <div class="secondbar">
+        <div class="secondbarleft">
+           <h1>Process Automation <br>Built for the Modern <br>Workforce</h1>
+           <h4>DocQ's no code automation platform empowers you to<br> create dynamic  workflows with an infinite arry of <br>
+        embedded business logic,in just a few minutes.</h4>
+        </div>
+        <div class="secondbarright">
+          <img id="img1" src="./photo/6254462bc0cafdc84ea93269_Group 3619.svg">
+          <img id="img2" src="./photo/626842776a4875bd1733cf23_Group 3607.svg">
+          <img id="img3" src="./photo/628bf85ee0f0af4cd0e8c846_Workflows.svg">
+        </div>
+
+    </div>
+    <div class="thirdbar">
+        <div>
+            <h4>Companies using DocQ</h4>
+        </div>
+        <div class="thirdbarlogo">
+        <img src="./photo/img.jpg">
+        <img src="./photo/download.png">
+        <img id="linkedink" src="./photo/images.png">
+        <img src="./photo/download (1).png">
+        <img src="./photo/images (1).png">
+        <img src="./photo/download.jpg">
+        </div>
+    </div>
+    <div class="fourbar">
+        <div class="fourbarleft">
+           <h1>Bridging process and <br>technology</h1>
+           <h4>DocQ can replicate and automate any business workflow<br>resulting in massive effciency gains. <br>
+            </h4>
+            <ul>
+                   <li> Adopt true end to end automation in your organization.<br>
+                         Generate templates from existing,new or even  physical<br>
+                        documents with a one-click process.Connecting them to <br>
+                        web-forms,CRMs,ERPs,HRISs and ATSs takes mere <br>
+                         moments with DocQ's pre-built intergrations and plug-ins.</li>
+                        <br>
+                         <li> Adopt true end to end automation in your organization.<br>
+                            Generate templates from existing,new or even  physical<br>
+                           documents process.Connecting them to <br>
+                           web-forms,CRMs,ERPs,HRISs and ATSs takes mere <br>
+                            moments with DocQ's pre-built intergrations and plug-ins.</li>
+                            <br>
+                            <li> Adopt true end to end automation in your organization.<br>
+                                Generate templates new or even  physical<br>
+                               documents with a one-click process.Connecting them to <br>
+                               web-forms,CRMs,ERPs,HRISs and ATSs takes mere <br>
+                                moments with DocQ's pre-built intergrations and plug-ins.</li>
+                               
+                         
+                        </ul>
+        </div>
+        <div class="fourbarright">
+          <img id="img1" src="./photo/6298eb6c81d6dc922dcb0b87_Group 3677.svg">
+          
+        </div>
+
+    </div>
+    <div class="fifthbar">
+        <h1>Our features</h1>
+        <div class="fifthbarcard">
+            <div >
+                <img src="./photo/626845e26e8a42cc5dd6ddcf_Group 3651.svg">
+                <h2>Decision <br>Engine</h2>
+                <p>Workflows for any<br>process</p>
+            </div>
+            <div>
+                <img src="./photo/626845e24b52eb2513502cf4_Group 3652.svg">
+                <h2>Decision <br>Engine</h2>
+                <p>Workflows for any<br>process</p>
+            </div>
+            <div>
+                <img src="./photo/626845e2cb928324852c7c86_Group 3653.svg">
+                <h2>Decision <br>Engine</h2>
+                <p>Workflows for any<br>process</p>
+            </div>
+            <div>
+                <img src="./photo/626845e18e6cfab396800d92_Group 3654.svg">
+                <h2>Decision <br>Engine</h2>
+                <p>Workflows for any<br>process</p>
+            </div>
+            <div>
+                <img src="./photo/626845e13a455eabe315c45e_Group 3655.svg">
+                <h2>Decision <br>Engine</h2>
+                <p>Workflows for any<br>process</p>
+            </div>
+            <div>
+                <img src="./photo/626845e0b6bfb00aa4731129_Group 3656.svg">
+                <h2>Decision <br>Engine</h2>
+                <p>Workflows for any<br>process</p>
+            </div>
+            <div>
+                <img src="./photo/626845e0107dc25e7dcf45ac_Group 3657.svg">
+                <h2>Decision <br>Engine</h2>
+                <p>Workflows for any<br>process</p>
+            </div>
+            <div>
+                <img src="./photo/626845e03a455eaad515c45d_Group 3658.svg">
+                <h2>Decision <br>Engine</h2>
+                <p>Workflows for any<br>process</p>
+            </div>
+            <div>
+                <img src="./photo/626845e10de90b8197fb0fbd_Group 3659.svg">
+                <h2>Decision <br>Engine</h2>
+                <p>Workflows for any<br>process</p>
+            </div>
+            <div>
+                <img src="./photo/626845e24b52ebffa7502ceb_Group 3560.svg">
+                <h2>Decision <br>Engine</h2>
+                <p>Workflows for any<br>process</p>
+            </div>
+        </div>
+        
+    </div>
+    <div class="six">
+          <h1>Our Features</h1>
+          <h3>DocQ equips your team to effortlessly automate business processes without writing a single line of code.</h3>
+        
+        <div class="sixbar">
+             <div class="sixbarleft">
+            <img src="./photo/628bf9adea7a295c3697745d_Frame 7068sixleft.svg">
+           
+        </div>
+        <div class="sixbarright">
+          <ul>
+            <li> <h2>Self sevice Simplicity</h2><p>Easy to use</p>
+            </li>
+            <li> <h5>Agility</h5><p> Instance dynamic asy to use</p>
+            </li>
+            <li> <h5>Integratins</h5><p> connect your platform with easy</p>
+            </li>
+            <li> <h5>Security</h5><p>Saas or on prem</p>
+            </li>
+            <li> <h5>No Code Automation</code></h1><p> DeciosionEasy to use</p>
+            </li>
+          </ul>
+        </div>
+    </div> 
+
+    </div>
+    <div class="sevenbar">
+        <h1>Customer Testimonials</h1>
+        <div>
+            <h2>"The DocQ team are collaborative partners who<br> consistently work to improve their product and the <br>
+            experience it provides for our candidates,hiring <br>managers,and recruiters.</h2><br>
+            <P><h5>Rebecca V.</h5>Sr. Manager,Clent Success & support</P>
+        </div>
+
+    </div>
+</body>
+</html>
